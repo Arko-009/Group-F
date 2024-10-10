@@ -1,0 +1,79 @@
+/* CSS */
+.searchbar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Clean white background */
+    border: 2px solid #858585; /* Light grey border */
+    border-radius: 14px;
+    padding: 0.4em 0.6em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 1em;
+    width: 80%; /* Set width as percentage */
+    max-width: 500px; /* Optional max width for larger screens */
+  }
+  
+  .searchbar:hover {
+    border-color: #00a6d6; /* Cool blue border on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
+  }
+  .searchbar input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 0.6em;
+    font-size: 1em;
+    flex: 1; /* Take up available space */
+    border-radius: 14px;
+    background-color: transparent;
+  }
+  .searchbar input[type="text"]::placeholder {
+    color: #888;
+  }
+  .searchbar button {
+    background-color: #0052d6; /* Cool blue button */
+    border: none;
+    padding: 0.5em;
+    border-radius: 29%; /* Circular button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.4em;
+  }
+  
+  .searchbar button:hover {
+    background-color: #05ce3e; /* Darker blue on hover */
+  }
+  
+  .searchbar button img {
+    filter: brightness(0) invert(1); /* White icon */
+  }
+  @media only screen and (max-width: 768px) {
+    .searchbar {
+      width: 70%; /* Adjust percentage for smaller screens */
+    }
+  }
+ 
+  @media only screen and (max-width: 604px) {
+    .searchbar {
+      width: 72%; /* Even smaller for very small screens */
+    } 
+  } @media only screen and (max-width: 463px) {
+    .searchbar {
+      width: 52%;
+      font-size: 16px;
+    } 
+  }
+  @media only screen and (max-width: 450px) {
+    .searchbar
+    {
+      width: 52%; 
+    }
+    nav ul {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+  

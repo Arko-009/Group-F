@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recycling Center Map</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url("earth.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #map {
+            width: 800px;
+            height: 600px;
+            margin: 50px auto;
+        }
+        h1 {
+            font-size: 36px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+</head>
+<body>
+    <h1 style="font-size: 36px;">Major Recycling Centers in the United States</h1>
+    <div id="map"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="recycling-centers.js"></script>
+    <script>
+       
+       // Centered on India, with zoom level 4
+        var map = L.map('map').setView([20.5937, 78.9629], 4);
+        
+    //  ei jaigata paltano baki ------------
+
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ',
+    maxZoom: 18
+}).addTo(map);
+    // -----------------------------------------------------
+        
+     //borders --- 
+     // Borderlines from OpenStreetMap
+     var boundaryLayer = L.tileLayer.wms("https://ows.terrestris.de/osm/service?", {
+    layers: 'OSM-Overlay-WMS',
+    format: 'image/png',
+    transparent: true,
+    opacity: 1 // Set initial opacity to 1 (fully visible)
+}).addTo(map);
+
+// Function to adjust opacity based on zoom level
+map.on('zoomend', function() {
+    var zoomLevel = map.getZoom();
+    if (zoomLevel >= 11) {
+        boundaryLayer.setOpacity(0); // Hide borders when zoom level is 11 or higher
+    } else {
+        boundaryLayer.setOpacity(1); // Show borders when zoom level is less than 11
+    }
+});
+        // Markers for recycling centers
+
+
+        recyclingCenters.forEach(function (center) {
+            L.marker(center.coordinates).addTo(map)
+                .bindPopup("<b>" + center.name + "</b><br>" + center.address);
+        });
+    </script>
+</body>
+</html>

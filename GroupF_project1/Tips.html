@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Carbon Emission Tips</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="tips.css">
+
+  <style>
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>How to Reduce Your Carbon Emissions</h1>
+    <button onclick="showRandomTip()">Generate Tip</button>
+    <p id="tip"></p>
+    <p id="linkContainer" style="display: none;">
+      Find Recycling Centers Near You: <a href="Recycling.html" id="recycling-link">Click here</a>
+    </p>
+  </div>
+
+  <script>
+    var tips = [
+      "Use public transportation or carpool whenever possible.",
+      "Turn off lights and unplug electronics when not in use.",
+      "Choose energy-efficient appliances and light bulbs.",
+      "Reduce, reuse, and recycle.",
+      "Plant trees and support reforestation efforts.",
+      "Eat less meat and choose sustainable food options.",
+      "Conserve water by taking shorter showers and fixing leaks.",
+      "Try to recycle as much as possible by visiting recycling centers.",
+      "Support renewable energy sources like solar and wind power.",
+      "Avoid single-use plastics and opt for reusable alternatives.",
+      "Educate others about the importance of reducing carbon emissions."
+    ];
+
+     function showRandomTip() {
+      var tipElement = document.getElementById("tip");
+      var linkContainer = document.getElementById("linkContainer");
+
+      var randomIndex = Math.floor(Math.random() * tips.length);
+      tipElement.innerHTML = tips[randomIndex];
+      linkContainer.style.display = "block";
+    }
+  </script>
+</body>
+</html>

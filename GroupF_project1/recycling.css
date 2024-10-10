@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("earth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 32px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.columns {
+  display: grid;
+  grid-gap: 20px; /* Increased gap between items */
+}
+
+.column {
+  padding: 10px;
+}
+
+.center-address {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 60vh;
+  }
+
+  /* Adjust the number of columns on larger screens */
+  @media (min-width: 1024px) {
+    .columns {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
