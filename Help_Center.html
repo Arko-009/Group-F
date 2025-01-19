@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center | EcoHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTTXRWKHC6mBcmBpnPqCh95QbLj6w9HZ8U5KP4dIWeQeCRFgdf5p6A5z+K/AYCJ6cw9Fv9Hjqw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/temp1-svg/help-center-favicon-color.svg">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0, 0, 0, 0.8);
+            font-size: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #6dd5ed;
+            text-shadow: 0px 0px 10px #6dd5ed;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .faq-container {
+            width: 70%;
+            margin: 70px auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-bottom: 15px;
+            padding: 20px 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+        }
+
+        .faq-item h3 {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .faq-item h3 span {
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .faq-item.open h3 span {
+            transform: rotate(45deg);
+        }
+
+        .faq-item p {
+            display: none;
+            margin-top: 15px;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .faq-item.open p {
+            display: block;
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        /* Glow Button */
+        .back-button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: white;
+            text-transform: uppercase;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: box-shadow 0.4s ease, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px 8px rgba(109, 213, 237, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 0;
+            text-align: center;
+            color: #ddd;
+        }
+
+        footer a {
+            color: #6dd5ed;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-icons i {
+            margin: 0 10px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons i:hover {
+            color: #6dd5ed;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .faq-container {
+                width: 90%;
+            }
+
+            header {
+                font-size: 30px;
+                padding: 20px;
+            }
+
+            .faq-item h3 {
+                font-size: 20px;
+            }
+
+            .faq-item p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Help Center</header>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>How do I track my order? <span>+</span></h3>
+            <p>You can track your order using the tracking number provided in your email.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I change my shipping address? <span>+</span></h3>
+            <p>You can update your address within 24 hours of placing the order.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What are the accepted payment methods? <span>+</span></h3>
+            <p>We accept credit cards, PayPal, and digital wallets.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I cancel my order? <span>+</span></h3>
+            <p>You can cancel your order within 2 hours of placement.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What is your return policy? <span>+</span></h3>
+            <p>You can return items within 30 days of delivery.</p>
+        </div>
+    </div>
+
+    <button class="back-button" onclick="window.history.back()">Go Back</button>
+
+    <footer>
+        <p>&copy; 2024 EcoHub. All rights reserved.</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+        <p>
+            <a href="#">Our Service</a> |
+            <a href="Shipping_Information.html" target="_blank">Shipping Information</a>
+        </p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color:black;
+    color: #fff;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar{
+    background: url("./assets/Innovations\ in\ HVAC\ Technology_\ How\ Technology\ is\ Influencing\ HVAC\ for\ the\ Better.jpg");  /* Leafy Green */
+    height: 100vh;
+    background-size: cover; 
+    width: 250px;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    
+}
+.main_content{
+    background: url("./assets/Innovations\ in\ HVAC\ Technology_\ How\ Technology\ is\ Influencing\ HVAC\ for\ the\ Better.jpg");
+    /* height: 100vh; */
+    background-size: cover;  
+    /* position: absolute;  */
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    /* padding: 0 1.5rem 0 1.5rem; */
+}
+
+.product-datils{
+    background-color: aqua;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav{
+    background-color: rgb(154, 222, 154);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    /* padding: 0.5rem 0.75rem; */
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option i{
+    font-size: 1.25rem;
+    color: black;
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: black;
+}
+
+.library{
+    background-color: rgb(154, 222, 154);
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem 0.75rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib-options i{
+    font-size: 1.25rem;
+}
+.lib-options a{
+    font-size: 1rem;
+}
+
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.icons i:hover{
+    opacity: 1;
+}
+
+.box{
+    background-color: rgb(185, 237, 185);
+    /* border: 1px solid black; */
+    height: 9rem;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.75rem 1rem;
+    color: black;
+}
+.box-p1{
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+.box-p2{
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+.badge{
+    background-color: bisque;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: rgb(242, 227, 141);
+    color:  #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 0.25rem  1rem ;
+}
+
+.sticky-nav-icons i{
+    font-size: 2rem;
+    width: 2rem;
+}
+.sticky-nav-options i{
+    margin-right: 0.65rem;
+}
+.card{
+    width: 150px;
+    height: 200px;
+    padding: 1rem;
+}
+.card-container{
+    display: flex;
+}
+.card-img{
+    width: 100%;
+    height: 100%;
+}
+.card-info{
+    font-size: 0.75rem;
+    opacity: 0.8;
+}

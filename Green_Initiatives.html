@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Initiative | EcoHub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap">
+    <link rel="icon" href="/temp1-svg/green-initiative-favicon-color.svg" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0fff4;
+            color: #333;
+        }
+
+        header {
+            background: radial-gradient(circle at top right, #66bb6a, #388e3c);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #2e7d32;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        header>nav{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header>nav>a{
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+
+        .initiative-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .initiative {
+            background-color: #e8f5e9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .initiative:hover {
+            transform: scale(1.05);
+        }
+
+        .initiative h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #388e3c;
+        }
+
+        .initiative img {
+            width: 100px;
+            height: 100px;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #a5d6a7;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .animated-icon {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>Green Initiative
+        <nav><a href="Sustainability_Goals.html" target="_blank">Sustainability Goals</a><a href="">About</a></nav>
+    </header>
+
+    <!-- Content Section -->
+    <div class="container">
+        <h1>Our Commitment to a Greener Planet</h1>
+        <p>Through our Green Initiative, EcoHub is dedicated to reducing environmental harm by promoting sustainable
+            practices, supporting eco-conscious communities, and driving change across the globe. We strive to minimize
+            waste, cut down on carbon emissions, and foster awareness among individuals to adopt greener lifestyles.</p>
+
+        <div class="initiative-grid">
+            <div class="initiative">
+                <img src="https://cdn-icons-png.flaticon.com/512/4836/4836379.png" alt="Tree Icon"
+                    class="animated-icon">
+                <h2>Tree Planting Drives</h2>
+                <p>EcoHub participates in annual tree planting drives to combat deforestation and promote biodiversity.
+                </p>
+            </div>
+
+            <div class="initiative">
+                <img src="https://cdn-icons-png.flaticon.com/512/2145/2145610.png" alt="Recycle Icon"
+                    class="animated-icon">
+                <h2>Recycling Programs</h2>
+                <p>We encourage customers to recycle by offering special incentives and setting up collection points.
+                </p>
+            </div>
+
+            <div class="initiative">
+                <img src="https://cdn-icons-png.flaticon.com/512/3408/3408595.png" alt="Carbon Icon"
+                    class="animated-icon">
+                <h2>Carbon Footprint Reduction</h2>
+                <p>Our operations focus on using renewable energy and reducing emissions wherever possible.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 EcoHub | Empowering Green Solutions</p>
+        <a href="index.html">Home</a> |
+        <a href="mission.html">Our Mission</a> |
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+</body>
+
+</html>

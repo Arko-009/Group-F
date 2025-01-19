@@ -1,0 +1,102 @@
+/* Main container styling */
+#Main-container {
+    max-width: 1200px; /* Max width for larger screens */
+    width: 90%; /* Use 90% width to ensure responsiveness */
+    padding: 20px; /* Padding for spacing */
+    margin: 100px auto; /* Center the container */
+    border-radius: 20px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Background blur effect */
+    text-align: center; /* Centered text */
+    color: white; /* White text color */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+    box-shadow: 
+        0 0 15px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(0, 255, 255, 0.5); /* Shadow effects */
+}
+.Main-container2 {
+    max-width: 1200px; /* Max width for larger screens */
+    width: 90%; /* Use 90% width to ensure responsiveness */
+    padding: 20px; /* Padding for spacing */
+    margin: 100px auto; /* Center the container */
+    border-radius: 20px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Background blur effect */
+    text-align: center; /* Centered text */
+    color: white; /* White text color */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+    box-shadow: 
+        0 0 15px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(0, 255, 255, 0.5); /* Shadow effects */
+}
+
+/* Image styling */
+#main-image {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/* Paragraph styling */
+#main-paragraph {
+    margin: 20px 0; /* Margin above and below paragraph */
+    font-size: 1.3rem; /* Increase font size */
+    line-height: 1.6; /* Improve readability */
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    text-align: justify;
+}
+
+/* Button styling */
+#main-button {
+    
+    padding: 15px 30px; /* Padding for button */
+    font-size: 1.1rem; /* Font size for button */
+    font-weight: bold; /* Bold text */
+    background-color: rgba(0, 255, 255, 0.4); /* Button background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Button hover effect */
+#main-button:hover {
+    background-color: rgba(0, 255, 255, 0.7); /* Darker on hover */
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 600px) {
+    #Main-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Row layout for larger screens */
+        align-items: center; /* Center items vertically */
+        text-align: left; /* Align text left for paragraphs */
+    }
+    .Main-container2 {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row-reverse; /* Row layout for larger screens */
+        align-items: center; /* Center items vertically */
+        text-align: left; /* Align text left for paragraphs */
+    }
+    #main-image {
+        width: 50%; /* Image takes 50% width */
+        margin-right: 20px; /* Margin to separate image and text */
+    }
+
+    #main-paragraph {
+        width: 50%; /* Paragraph takes 50% width */
+    }
+}
+
+@media (min-width: 1200px) {
+    #Main-container {
+        padding: 40px; /* Increase padding for larger screens */
+    }
+}
+@media (max-width: 430px) {
+    #Main-container {
+        margin-right: 0; /* Increase padding for larger screens */
+    }
+}

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusable Item</title>
+    <link rel="icon" href="/temp1-svg/items-high-resolution-logo-grayscale-transparent.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f0f4f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header { 
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        .hero {
+            background: url('images/hero_bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 10px solid #ff6347;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            z-index: 2;
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            z-index: 2;
+            position: relative;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .btn {
+            background: #ff6347;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn:hover {
+            background: #e03e2b;
+            transform: scale(1.05);
+        }
+
+        .about,
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: white;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .about:hover,
+        .contact:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .about h2,
+        .contact h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #007bff;
+        }
+
+        .items {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: white;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .items h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #007bff;
+        }
+
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .item-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .item-card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .item-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .item-card h3 {
+            margin: 10px 0;
+        }
+
+        .item-card p {
+            padding: 0 10px 10px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .socials a:hover {
+            color: #ff6347;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+            padding: 12px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-color: #ff6347;
+        }
+
+        form button {
+            background: #ff6347;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #e03e2b;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Reusable Item</div>
+        <nav>
+            <ul>
+                <li><a href="Organic_Clothing.html" target="_blank">Organic Clothing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#items">Products</a></li>
+                <li><a href="Eco_Gadget.html" target="_blank">Eco Gadget</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Join the Reusable Revolution!</h1>
+        <p>Explore our collection of eco-friendly reusable items that make a difference.</p>
+        <a href=""btn">Shop Now</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We promote sustainability by offering a variety of reusable items that help reduce waste and protect our
+            planet. Join us in making the world a greener place!</p>
+    </section>
+
+    <section id="items" class="items">
+        <h2>Our Reusable Items</h2>
+        <div class="item-grid">
+            <div class="item-card">
+                <img src="imagekol/Voniko Nimh Rechargeable AAA Batteries 24 Pack, 1_2v 850mAh Recharge up to 1000x Times, Size_HR03.jpg" alt="Bamboo Cup">
+                <h3>VONIKO Rechargeable Battery</h3>
+                <p>A sparate Battery !! yes you can power up again </p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Gobelet réutilisable en paille de blé - 3 tailles - 550ml - Bleu.jpg" alt="Stainless Steel Straw">
+                <h3>Coffee Cup</h3>
+                <p>Don't Thorow it ,wash it to use leter </p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/5 Reasons Marketing Makes Sense with Eco-Friendly Custom Reusable Bags _ Factory Direct Promos.jpg" alt="Cloth Bag">
+                <h3>Carry Bags(EV)</h3>
+                <p>Say goodbye to plastic bags with our eco-friendly cloth bags. Perfect for shopping!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Travel Toothpaste Transfer Tool - Refill Travel Tubes, Save Money & Reduce Waste.jpg" alt="Glass Water Bottle">
+                <h3>Toothpaste</h3>
+                <p>Use a reusable toothpaste dispenser to reduce plastic waste and packaging.</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Pen and Pencil Organizer Makeup Brush Holder _ Silver _ Made in USA by Quetzal.jpg" alt="Bamboo Cup">
+                <h3>Steel Cup</h3>
+                <p>A stylish cup made from sustainable bamboo. Perfect for your morning coffee!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Laundry detergent sheets Set of 3 packs of 36.jpg" alt="Stainless Steel Straw">
+                <h3>Green Wine Estate</h3>
+                <p>Visit a green wine estate for sustainable tastings and eco-friendly practices!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Home Trash With Cover Small Trash Can Mini Desktop Desk Dustbin Garbage Can.jpg" alt="Cloth Bag">
+                <h3>Lesbin Plastic</h3>
+                <p>Lesbin plastic containers are reusable and ideal for storage and organization!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/f7f9cb14-9e4d-414b-94e7-4a3aa1b70d99.jpg" alt="Glass Water Bottle">
+                <h3>Paper Basket</h3>
+                <p>Create a reusable paper basket for organizing items and reducing waste!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Handmade Colorful Recycled Newspaper Round Pen Holder _ Pencil Holder with a Matching Coaster- Desk.jpg" alt="Bamboo Cup">
+                <h3>Newspaper Pencil Holder</h3>
+                <p>Make a pencil holder from recycled newspaper for an eco-friendly project!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Solid Unpaper Towel - Six Pack _ Greens.jpg" alt="Stainless Steel Straw">
+                <h3>Microfiber Cleaning Cloths</h3>
+                <p>Microfiber cleaning cloths are reusable and reduce waste from disposables!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/dd3fd787-bba0-41e6-8ef7-754c88346aed.jpg" alt="Cloth Bag">
+                <h3>Laundry Detergent Sheets</h3>
+                <p>Use laundry detergent sheets to reduce plastic waste and simplify washing!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Reusable Stainless Steel Water Bottle (Matt Effect Black) - White.jpg" alt="Glass Water Bottle">
+                <h3>Glass Water Bottle</h3>
+                <p>Keep your drinks fresh in our stylish glass bottles. Stay hydrated in style!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/1pc Portable Waterproof Pill Organizer, Reusable Medicine Travel Case For Men & Women, Daily Vitamin Supplement Holder For Camping, Office, Back To School.jpg" alt="Bamboo Cup">
+                <h3>Medicine Pill</h3>
+                <p>Use a reusable pill organizer to manage daily medication efficiently!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Arch Impression Mate Coir Doormat  - Temple & Webster.jpg" alt="Stainless Steel Straw">
+                <h3>Mats Avenue Coir</h3>
+                <p>Reuse Avenue coir mats as eco-friendly doormats, compost liners, or garden mulch!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/TIKI 65-in Urban Metal Steel Citronella Garden Torch Lowes_com.jpg" alt="Cloth Bag">
+                <h3>Green Stem</h3>
+                <p>Reuse a green stem for plant support, crafts, or garden decorations!</p>
+            </div>
+            <div class="item-card">
+                <img src="imagekol/Reusable Hair Wraps (2 Pack).jpg" alt="Glass Water Bottle">
+                <h3>Braided Embroidery Thread Bracelet</h3>
+                <p>Create a braided embroidery thread bracelet and reuse it for multiple styles!</p>
+            </div>
+            
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Reusable Item. All Rights Reserved.</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

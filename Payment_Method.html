@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods | EcoHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/temp1-svg/payment-favicon-color.svg">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            color: #333;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #1e88e5; 
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+        .icon {
+            text-align: center;
+            margin: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+            border-radius: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 180px;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .icon p {
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: #1565c0;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #90caf9;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 2.2rem;
+                padding: 40px 15px;
+            }
+
+            .icons {
+                justify-content: center;
+            }
+
+            .icon {
+                width: 150px;
+                padding: 15px;
+            }
+
+            .icon img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .icon p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.8rem;
+                padding: 30px 10px;
+            }
+
+            .icon {
+                width: 120px;
+                margin: 10px;
+            }
+
+            .icon img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .icon p {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Payment Methods</header>
+
+    <div class="icons">
+        <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/179/179457.png" alt="Credit Card">
+            <p>Credit/Debit Cards</p>
+        </div>
+        <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/888/888870.png" alt="PayPal">
+            <p>PayPal</p>
+        </div>
+        <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2698/2698233.png" alt="Wallet">
+            <p>Digital Wallets</p>
+        </div>
+        <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Bank Transfer">
+            <p>Bank Transfers</p>
+        </div>
+        <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149470.png" alt="UPI">
+            <p>UPI Payments</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EcoHub. All rights reserved.</p>
+        <p>
+            <a href="Return_Policy.html" target="_blank">Return Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission | EcoHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="imagekol/our-mission-favicon-color5.svg">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f5f1;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo a {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #a8edea;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url(imagekol/img6.jpg) no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 700px;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 50px 10%;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .mission h2 {
+            color: #2E8B57;
+            margin-bottom: 20px;
+        }
+
+        .mission p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .mission-stats {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .stat {
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            padding: 25px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .stat:hover {
+            transform: scale(1.05);
+        }
+
+        .stat h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        footer a {
+            color: white;
+            font-size: 18px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mission-stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat {
+                width: 80%;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">EcoHub</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="shop.html">Shop</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Sustainability_Goals.html" target="_blank">Sustainability Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Our Green Mission</h1>
+            <p>Making sustainable living easy, affordable, and accessible for everyone. Together, we can build a greener
+                future!</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <h2>Our Commitment to Sustainability</h2>
+        <p>At EcoHub, we believe that small changes can make a big impact. From eco-friendly products to zero-waste
+            packaging, we are dedicated to building a greener tomorrow.</p>
+
+        <h2>Building a Greener Community</h2>
+        <p>We are more than just a store – we are a movement. Join our community to learn how you can live sustainably
+            and reduce your carbon footprint.</p>
+
+        <div class="mission-stats">
+            <div class="stat">
+                <h3>100% Eco-Friendly</h3>
+                <p>All products sourced with sustainability in mind.</p>
+            </div>
+            <div class="stat">
+                <h3>10,000+ Happy Customers</h3>
+                <p>Helping individuals make greener choices.</p>
+            </div>
+            <div class="stat">
+                <h3>Zero-Waste Packaging</h3>
+                <p>Plastic-free, eco-conscious shipping.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <!-- <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li> -->
+            <li><a href="privacy.html">Return Policy</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p>&copy; 2024 EcoHub | Designed for a sustainable future.</p>
+    </footer>
+</body>
+
+</html>

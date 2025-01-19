@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Information | EcoHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/temp1-svg/shipping-favicon-color.svg">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            overflow-x: hidden;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            letter-spacing: 1px;
+            animation: slideIn 0.8s ease-in-out;
+        }
+
+        .content {
+            margin: 40px auto;
+            width: 80%;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .content p {
+            font-size: 22px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .parallax {
+            background-image: url('https://pin.it/53SHXLAMD');
+            height: 110px;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .parallax h2 {
+            font-size: 40px;
+            font-weight: 700;
+            z-index: 1;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .parallax h2:hover {
+            transform: scale(1.05);
+        }
+
+        /* Card Styles for Additional Information */
+        .info-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            width: 90%;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            flex: 1 1 300px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .info-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-card p {
+            font-size: 18px;
+            z-index: 1;
+        }
+
+        /* Add Icon Styles */
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 0;
+        }
+
+        .info-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+            position: relative;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 36px;
+                padding: 60px 0;
+            }
+
+            .content p {
+                font-size: 18px;
+            }
+
+            .parallax h2 {
+                font-size: 28px;
+            }
+
+            .info-card h3 {
+                font-size: 20px;
+            }
+
+            .info-card p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-card {
+                flex: 1 1 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Shipping Information</header>
+
+    <div class="content">
+        <p>We deliver eco-friendly products worldwide with sustainable packaging and fast shipping!</p>
+    </div>
+
+    <div class="parallax">
+        <h2>Fast & Reliable Shipping</h2>
+    </div>
+
+    <div class="content">
+        <p>Enjoy free shipping on orders above $50. Track your orders with real-time updates.</p>
+    </div>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <h3>Shipping Times</h3>
+            <p>Orders are typically shipped within 1-3 business days. Delivery times vary based on your location.</p>
+        </div>
+        <div class="info-card">
+            <h3>International Shipping</h3>
+            <p>We ship to over 50 countries. Additional fees may apply depending on your location.</p>
+        </div>
+        <div class="info-card">
+            <h3>Order Tracking</h3>
+            <p>Once your order has shipped, you will receive a tracking number via email to monitor its progress.</p>
+        </div>
+        <div class="info-card">
+            <h3>Eco-Friendly Packaging</h3>
+            <p>All our products are shipped in 100% recyclable packaging to reduce environmental impact.</p>
+        </div>
+        <div class="info-card">
+            <h3>Delivery Options</h3>
+            <p>Choose from standard, express, or same-day delivery options at checkout for your convenience.</p>
+        </div>
+        <div class="info-card">
+            <h3>Customer Support</h3>
+            <p>Our support team is available 24/7 to assist you with any shipping inquiries.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EcoHub. All rights reserved.</p>
+        <p>
+            <a href="Help_Center.html" target="_blank">Help Center</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="Return_Policy.html" target="_blank">Return Policy</a>
+        </p>
+    </footer>
+</body>
+
+</html>

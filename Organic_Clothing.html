@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Clothing | EcoHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/temp1-svg/cloths-high-resolution-logo-grayscale-transparent.svg">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #e8f5e9, #a5d6a7);
+            color: #2e7d32;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px; 
+            background-color: #388e3c;
+            color: white;
+            font-size: 2.8rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .search-container input {
+            width: 80%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 20px;
+            border: 1px solid #66bb6a;
+            outline: none;
+        }
+
+        .search-container input:focus {
+            box-shadow: 0 0 10px rgba(102, 187, 106, 0.5);
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px auto;
+            max-width: 1200px;
+            padding: 10px;
+        }
+
+        .card {
+            width: 280px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px;
+            font-size: 1.5rem;
+            color: #2e7d32;
+        }
+
+        .card p {
+            margin: 0 15px 15px;
+            font-size: 1rem;
+            color: #4e4e4e;
+        }
+
+        .links-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .links-container a {
+            text-decoration: none;
+            color: white;
+            background-color: #388e3c;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .links-container a:hover {
+            background-color: #2e7d32;
+        }
+
+        header>nav{
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+        }
+
+        header>nav>a{
+            text-decoration: none;
+            color:white;
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: #388e3c;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #a5d6a7;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%;
+            }
+
+            header {
+                font-size: 2rem;
+            }
+
+            .search-container input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Organic Clothing
+
+        <nav><a href="">Products</a>
+            <a href="Reusable_Items.html" target="_blank">Reusable Items</a></nav>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for organic clothes..." oninput="filterCards()">
+    </div>
+
+    <div class="card-container" id="card-container">
+        <!-- Example cards, replace images with real URLs -->
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/TRIBAL Men's Organic Gauze Cotton Harem Pants (Army Green, Sage Green) - L _ Sage Green _ Short.jpg" alt="Organic Gauze Cotton Harem Pants">
+            <h3>Organic Gauze Cotton Harem Pants</h3>
+            <p>Organic gauze cotton harem pants are lightweight, breathable, and perfect for relaxed comfort.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/Hand Block Printed Summer Dress Floral Colour Block Tiered Organic Cotton Ethical Sustainable Sundress Women Maxi Dress.jpg" alt="Organic Cotton Ethical Sustainable Sundress Women Maxi Dress">
+            <h3>Organic Cotton Ethical Sustainable Sundress Women Maxi Dress</h3>
+            <p>Organic cotton ethical sustainable sundresses are eco-friendly, lightweight, and perfect for summer style.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/High waist tapered linen pants, Elastic waist wide leg pants.jpg" alt="Elastic waist wide leg pants">
+            <h3>Elastic waist wide leg pants</h3>
+            <p>Elastic waist wide leg pants offer comfort, flexibility, and a relaxed fit.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/White Raw Cotton Minimalist Poncho for Men.jpg" alt="White Raw Cotton Minimalist Poncho for Men">
+            <h3>White Raw Cotton Minimalist Poncho for Men</h3>
+            <p>White raw cotton minimalist poncho offers breathable, sustainable style for men.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/white Linen Summer Autumn Women Casual Pants with Pockets.jpg" alt="Women Casual Pants with Pockets">
+            <h3>Women Casual Pants with Pockets</h3>
+            <p>Women's casual pants with pockets offer practicality, comfort, and everyday versatility.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/Boho Organic Cotton Pants - M _ Earth.jpg" alt="Boho Organic Cotton Pants - M _ Earth">
+            <h3>Boho Organic Cotton Pants</h3>
+            <p>Boho organic cotton pants are flowy, comfortable, and perfect for casual wear.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/At Home _ Dawn - M.jpg" alt="At Home _ Dawn - M">
+            <h3>At Home _ Dawn - M</h3>
+            <p>At Home _ Dawn - M offers organic, minimalist loungewear, perfect for sustainable comfort.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/Sage Ambrosia Set Top and Pants • Adjustable Crop Top & Trousers • Boho Casual Set for Women.jpg" alt="Boho Casual Set for Women">
+            <h3>Boho Casual Set for Women</h3>
+            <p>Boho casual sets for women feature relaxed, flowy designs using breathable, organic fabrics perfect for effortless style and comfort.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/Organic Double-Knit Sweater.jpg" alt="Organic Double-Knit Sweater">
+            <h3>Organic Double-Knit Sweater</h3>
+            <p>An organic double-knit sweater is warm, sustainable, soft, and eco-friendly, offering comfort with style.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/Seasalt Cornwall Green Mens Towen Organic Cotton Blazer -  green.jpg" alt="Seasalt Cornwall Green Mens Towen Organic Cotton Blazer">
+            <h3>Seasalt Cornwall Green Mens Towen Organic Cotton Blazer</h3>
+            <p>The Seasalt Cornwall Green Men's Towen Organic Cotton Blazer is a sustainable, stylish, lightweight, and eco-friendly option for casual or formal occasions.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/Someday Organic Corduroy Trouser - Dark Denim - XS(R).jpg" alt="Someday Organic Corduroy Trouser - Dark Denim - XS(R)">
+            <h3>Someday Organic Corduroy Trouser</h3>
+            <p>
+                Someday organic corduroy trousers offer style, comfort, and sustainable fashion.</p>
+        </div>
+        <div class="card">
+            <img src="/imagekol/Organic Cloth/Oliver Spencer - Reversible Organic Cotton-Jersey Sweatshirt.jpg" alt="Oliver Spencer - Reversible Organic Cotton-Jersey Sweatshirt">
+            <h3>Oliver Spencer</h3>
+            <p>Oliver Spencer offers stylish, contemporary clothing made from organic materials.</p>
+        </div>
+        <div class="card">
+            <img src="imagekol/Organic Cloth/These Fashion Mistakes Can Add 10 Pounds to Your Look.jpg" alt="These Fashion Mistakes Can Add 10 Pounds to Your Look">
+            <h3>Best Fashion</h3>
+            <p>Best fashion includes stylish, sustainable clothing made from organic materials.</p>
+        </div>
+        <div class="card">
+            <img src="imagekol/Organic Cloth/Brown Linen Blazer Jacket for Men - S.jpg" alt="Brown Linen Blazer Jacket for Men - S">
+            <h3>Brown Linen Blazer Jacket for Men</h3>
+            <p>Brown linen blazer jacket for men is stylish, breathable, and sustainable.</p>
+        </div>
+        <div class="card">
+            <img src="imagekol/Organic Cloth/Claggan Shirt - Green - Cotton - Octobre Éditions.jpg" alt="Claggan Shirt - Green - Cotton - Octobre Éditions">
+            <h3>Claggan Shirt</h3>
+            <p>The Claggan shirt combines organic fabric with a relaxed, stylish fit.</p>
+        </div>
+        <div class="card">
+            <img src="imagekol/Organic Cloth/Linen Tunic Men Long Sleeve Relaxed Fit Shirt Summer Kaftan Shirt Casual Arabic Tunic Dress - Etsy.jpg" alt="Linen Tunic Men Long Sleeve Relaxed Fit Shirt Summer Kaftan Shirt Casual Arabic Tunic Dress - Etsy">
+            <h3>Linen Tunic Men</h3>
+            <p>Men's linen tunic offers comfort, breathability, and a relaxed style.</p>
+        </div>
+        <!-- Add more cards similarly -->
+    </div>
+
+    <div class="links-container">
+        <a href="https://www.amazon.in/s?k=organic+clothes" target="_blank">Shop on Amazon</a>
+        <a href="https://www.flipkart.com/search?q=organic+clothes" target="_blank">Shop on Flipkart</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EcoHub. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function filterCards() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                card.style.display = title.includes(searchInput) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
