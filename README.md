@@ -1,10 +1,10 @@
 # Group-F
 it is a prpjrct 
 v
-![Home Page](screenshots/home.png)
-![Eco Tips](screenshots/eco-tips.png)
-![Recycling Section](screenshots/recycling.png)
-![Map Feature](screenshots/map.png)
-![Chatbot Section](screenshots/chatbot.png)
-![Chatbot Section](screenshots/carboncal.png)
+![Home Page](screenshots/home.png.png)
+![Eco Tips](screenshots/eco-tips.png.png)
+![Recycling Section](screenshots/recycling.png.png)
+![Map Feature](screenshots/map.png.png)
+![Chatbot Section](screenshots/chatbot.png.png)
+![Chatbot Section](screenshots/carboncal.png.png)
 
